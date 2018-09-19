@@ -26,11 +26,16 @@ int main(int argc, char* argv[]) {
     char buffer[256];
     from_file.getline(buffer, sizeof(buffer));
     std::string line{ buffer };
+    if(line.compare("") == 0){
+        break;
+    }
+/*
     std::string::size_type pos = line.find(prefix);
     if (pos == std::string::npos) {
       continue;
     }
     line = line.substr(pos + prefix.size());
+*/
     uint64_t key = stol(line);
 
     to_file.write(reinterpret_cast<char*>(&key), sizeof(key));

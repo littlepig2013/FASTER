@@ -33,9 +33,9 @@ enum class Workload {
   RMW_100 = 1,
 };
 
-static constexpr uint64_t kInitCount = 250000000;
-static constexpr uint64_t kTxnCount = 1000000000;
-static constexpr uint64_t kChunkSize = 3200;
+static constexpr uint64_t kInitCount = 1000000;
+static constexpr uint64_t kTxnCount = 4000000;
+static constexpr uint64_t kChunkSize = 1600;
 static constexpr uint64_t kRefreshInterval = 64;
 static constexpr uint64_t kCompletePendingInterval = 1600;
 
